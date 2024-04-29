@@ -1,3 +1,4 @@
+/* Keep the original styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +11,6 @@ body {
 }
 
 .gallery {
-
     width: 900px;
     display: flex;
     overflow-x: scroll;
@@ -49,10 +49,27 @@ body {
     margin: 40px;
 }
 
-
 .gallery div img:hover {
     filter: grayscale(0);
     cursor: pointer;
     transform: scale(1.1);
+}
 
+/* Add media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    .gallery {
+        width: auto;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    }
+
+    .gallery div {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .gallery div img {
+        max-width: 100%;
+        height: auto;
+    }
 }
