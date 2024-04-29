@@ -27,6 +27,7 @@ body {
 
 .gallery div img {
     width: 100%;
+    filter: grayscale(100%);
 }
 
 .gallery::-webkit-scrollbar {
@@ -35,4 +36,22 @@ body {
 
 .gallery-warp {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+}
+
+#backBtn,
+#nextBtn {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+
+
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+
 }
